@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Duarte Vieira Lima | Marcenaria de Alto Padrão</title>
-    <meta name="description" content="Marceneiro autônomo em Osasco. Móveis sob medida, projetos 3D e marcenaria profissional.">
+    <title>Tudodimadeira | Marcenaria de Alto Padrão</title>
+    <meta name="description" content="Marcenaria em Osasco. Móveis sob medida, projetos 3D e marcenaria profissional.">
     
-    <!-- Pré-carregamento de Fontes do Google -->
+    <!-- Tag para adicionar o ícone (favicon) na aba do navegador -->
+    <link rel="icon" type="image/png" href="./img/logo.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     
-    <!-- Biblioteca de Ícones (Lucide) -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
-    <!-- Tailwind CSS (Framework de Estilização) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Configurações Customizadas do Tailwind (Cores e Fontes) -->
     <script>
         tailwind.config = {
             theme: {
@@ -45,20 +44,18 @@
 </head>
 <body class="font-sans text-gray-800 bg-wood-100 antialiased selection:bg-gold-500 selection:text-white">
 
-    <!-- ========================================== -->
-    <!-- BARRA DE NAVEGAÇÃO SUPERIOR -->
-    <!-- ========================================== -->
     <nav class="fixed w-full z-50 transition-all duration-300 bg-wood-900/95 backdrop-blur-md shadow-md py-4">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#home" class="flex items-center gap-2 text-white hover:text-gold-500 transition-colors">
-                <i data-lucide="hammer" class="w-6 h-6 text-gold-500"></i>
-                <span class="font-serif font-bold text-xl tracking-wide uppercase">J. Duarte</span>
+            
+            <!-- Logo Atualizado -->
+            <a href="#home" class="flex items-center gap-3 text-white hover:text-gold-500 transition-colors">
+                <!-- A tag img abaixo substitui o ícone antigo. O "rounded-full" deixa a imagem redonda, remova se o seu logo for retangular ou tiver fundo transparente e não precisar disso -->
+                <img src="./img/logo.png" alt="Logo Tudodimadeira" class="w-10 h-10 md:w-12 md:h-12 object-cover rounded-full border border-gold-500/50 shadow-sm">
+                <span class="font-serif font-bold text-xl tracking-wide uppercase">Tudodimadeira</span>
             </a>
             
-            <!-- Menu Desktop -->
             <div class="hidden md:flex gap-8 items-center text-sm font-medium tracking-wider uppercase text-gray-300">
-                <a href="#sobre" class="hover:text-gold-500 transition-colors">Sobre</a>
+                <a href="#sobre" class="hover:text-gold-500 transition-colors">História</a>
                 <a href="#metodo" class="hover:text-gold-500 transition-colors">O Método</a>
                 <a href="#portfolio" class="hover:text-gold-500 transition-colors">Portfólio</a>
                 <a href="#contato" class="px-5 py-2.5 border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white rounded-sm transition-all">
@@ -66,28 +63,23 @@
                 </a>
             </div>
 
-            <!-- Botão Menu Mobile (Hamburguer) -->
             <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none">
                 <i data-lucide="menu" class="w-7 h-7"></i>
             </button>
         </div>
         
-        <!-- Dropdown Menu Mobile -->
         <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-wood-900 border-t border-gray-800 shadow-xl flex flex-col p-4 gap-4">
-            <a href="#sobre" class="text-white uppercase text-sm font-medium p-2 border-b border-gray-800 hover:text-gold-500">Sobre</a>
+            <a href="#sobre" class="text-white uppercase text-sm font-medium p-2 border-b border-gray-800 hover:text-gold-500">História</a>
             <a href="#metodo" class="text-white uppercase text-sm font-medium p-2 border-b border-gray-800 hover:text-gold-500">O Método</a>
             <a href="#portfolio" class="text-white uppercase text-sm font-medium p-2 border-b border-gray-800 hover:text-gold-500">Portfólio</a>
             <a href="#contato" class="text-gold-500 uppercase text-sm font-bold p-2">Solicitar Orçamento</a>
         </div>
     </nav>
 
-    <!-- ========================================== -->
-    <!-- SESSÃO: INÍCIO (HERO SECTION) -->
-    <!-- ========================================== -->
     <section id="home" class="relative w-full min-h-[65vh] md:min-h-[75vh] flex items-center justify-center bg-[linear-gradient(rgba(24,24,27,0.85),rgba(24,24,27,0.90)),url('./img/fundo1.png')] bg-cover bg-center bg-no-repeat pt-20 pb-10">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <span class="text-gold-500 font-semibold tracking-widest uppercase text-xs md:text-sm mb-2 block">
-                Jonathan Duarte Vieira Lima • Marceneiro
+                Tudodimadeira • Marcenaria
             </span>
             <h1 class="text-3xl md:text-5xl lg:text-5xl font-serif font-bold text-white mb-3 leading-tight">
                 Móveis planejados, pura <br class="hidden md:block"/> 
@@ -107,80 +99,80 @@
         </div>
     </section>
 
-    <!-- ========================================== -->
-    <!-- SESSÃO: SOBRE O PROFISSIONAL -->
-    <!-- ========================================== -->
     <section id="sobre" class="py-24 bg-white overflow-hidden">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-6xl mx-auto">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            
+            <div class="max-w-4xl mx-auto text-center mb-20">
+                <h2 class="text-[#8b5a2b] text-[11px] font-bold tracking-[0.2em] uppercase mb-3">Nossa trajetória</h2>
+                <h3 class="text-4xl font-serif font-bold text-[#0f172a] mb-8">Conheça nossa história</h3>
                 
-                <!-- Coluna da Esquerda: Imagem de Perfil e Selo de Experiência -->
-                <div class="relative w-full max-w-md mx-auto lg:mx-0 mt-8 lg:mt-0">
-                    <!-- Borda decorativa dourada atrás da foto -->
-                    <div class="absolute top-6 bottom-[-24px] left-6 right-[-24px] border-[1.5px] border-gold-500 z-0 pointer-events-none"></div>
-                    
-                    <!-- Imagem Local -->
-                    <img src="./img/perfil1.png" alt="Jonathan Duarte Vieira Lima" class="relative z-10 w-full object-cover shadow-sm">
-                    
-                    <!-- Selo flutuante de "+10 Anos" -->
-                    <div class="absolute -left-6 -bottom-8 md:-left-10 md:-bottom-10 z-20 bg-[#111827] text-white p-6 shadow-2xl w-36">
-                        <span class="block text-3xl font-serif font-bold mb-1">+10</span>
-                        <span class="text-[10px] font-medium uppercase tracking-widest text-gray-300 leading-tight block">Anos de<br>Experiência</span>
-                    </div>
+                <div class="space-y-6 text-[#4b5563] font-light leading-relaxed text-base md:text-lg">
+                    <p>
+                        A Tudu Dimadeira nasceu da paixão compartilhada pela marcenaria artesanal, gosto muito de móveis, pois eles contam histórias e otimizam espaços. Com atuação principal na <strong>região de Osasco</strong> e arredores, dedicamo-nos a criar peças únicas que unem estética impecável e máxima funcionalidade.
+                    </p>
+                    <p>
+                        Entendemos que um móvel sob medida não é apenas uma caixa de madeira; é a realização de um sonho, a otimização do seu lar ou escritório. Por isso, trabalhamos com materiais de primeira linha (MDF de alta densidade, madeiras nobres, ferragens premium) e garantimos um acabamento minucioso em cada detalhe.
+                    </p>
+                    <p class="font-medium text-[#1f2937] pt-2">
+                        Atendimento personalizado desde o primeiro contato até a montagem final na sua casa.
+                    </p>
                 </div>
 
-                <!-- Coluna da Direita: Textos Descritivos -->
-                <div class="pt-8 lg:pt-0">
-                    <h2 class="text-[#8b5a2b] text-[11px] font-bold tracking-[0.2em] uppercase mb-3">Conheça o profissional</h2>
-                    <h3 class="text-4xl font-serif font-bold text-[#0f172a] mb-6">Jonathan Duarte Vieira Lima</h3>
-                    
-                    <div class="space-y-5 text-[#4b5563] font-light leading-relaxed text-[15px]">
-                        <p>
-                            Sou um marceneiro autônomo apaixonado pela profissão, gosto muito de móveis, pois eles contam histórias e otimizam espaços. Com atuação principal na <strong>região de Osasco</strong> e arredores, dedico-me a criar peças únicas que unem estética impecável e máxima funcionalidade.
-                        </p>
-                        <p>
-                            Entendo que um móvel sob medida não é apenas uma caixa de madeira; é a realização de um sonho, a otimização do seu lar ou escritório. Por isso, trabalho com materiais de primeira linha (MDF de alta densidade, madeiras nobres, ferragens premium) e garanto um acabamento minucioso em cada detalhe.
-                        </p>
-                        <p class="font-medium text-[#1f2937]">
-                            Atendimento personalizado desde o primeiro contato até a montagem final na sua casa.
-                        </p>
-                    </div>
+                <hr class="my-10 border-gray-100">
 
-                    <hr class="my-8 border-gray-100">
-
-                    <!-- Ícones informativos de Localização e CNPJ -->
-                    <div class="flex flex-col sm:flex-row gap-8 sm:gap-12">
-                        <!-- Localização -->
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 shrink-0 rounded-full bg-[#f4ede4] flex items-center justify-center text-[#8b5a2b]">
-                                <i data-lucide="map-pin" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-[#0f172a] text-sm">Localização</h4>
-                                <p class="text-xs text-[#6b7280] mt-0.5">Osasco, SP e Região</p>
-                            </div>
+                <div class="flex flex-col sm:flex-row gap-8 sm:gap-12 justify-center items-center">
+                    <div class="flex items-center gap-4 text-left">
+                        <div class="w-12 h-12 shrink-0 rounded-full bg-[#f4ede4] flex items-center justify-center text-[#8b5a2b]">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
                         </div>
-                        
-                        <!-- Empresa -->
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 shrink-0 rounded-full bg-[#f4ede4] flex items-center justify-center text-[#8b5a2b]">
-                                <i data-lucide="file-text" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-[#0f172a] text-sm">Empresa Legalizada</h4>
-                                <p class="text-xs text-[#6b7280] mt-0.5">CNPJ: 60.390.640/0001-87</p>
-                            </div>
+                        <div>
+                            <h4 class="font-bold text-[#0f172a] text-sm">Localização</h4>
+                            <p class="text-xs text-[#6b7280] mt-0.5">Osasco, SP e Região</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-4 text-left">
+                        <div class="w-12 h-12 shrink-0 rounded-full bg-[#f4ede4] flex items-center justify-center text-[#8b5a2b]">
+                            <i data-lucide="file-text" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#0f172a] text-sm">Empresa Legalizada</h4>
+                            <p class="text-xs text-[#6b7280] mt-0.5">CNPJ: 60.390.640/0001-87</p>
                         </div>
                     </div>
                 </div>
-                
             </div>
+
+            <div class="pt-16 border-t border-gray-100">
+                <div class="text-center mb-16">
+                    <h2 class="text-xs font-bold text-gold-500 tracking-widest uppercase mb-2">A Equipe</h2>
+                    <h3 class="text-3xl md:text-4xl font-serif font-bold text-wood-900 mb-4">Nossos profissionais</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start max-w-5xl mx-auto">
+                    <div class="bg-wood-100/50 p-8 rounded-md shadow-sm border border-gray-100 flex flex-col items-center text-center">
+                        <img src="./img/jonathan.png" alt="Jonathan Duarte - Marceneiro Especialista" class="w-40 h-40 object-cover rounded-full mb-6 border-4 border-white shadow-md">
+                        <h4 class="text-2xl font-serif font-bold text-wood-900 mb-1">Jonathan Duarte</h4>
+                        <p class="text-sm font-medium text-gold-600 tracking-wider uppercase mb-4">Marceneiro Especialista</p>
+                        <p class="text-gray-700 font-light text-sm leading-relaxed">
+                            Marceneiro experiente focado no acabamento fino e detalhista, transformando projetos complexos em realidade. apaixonado pelo ofício, pai orgulhoso e apaixonado por moveis.
+                        </p>
+                    </div>
+
+                    <div class="bg-wood-100/50 p-8 rounded-md shadow-sm border border-gray-100 flex flex-col items-center text-center">
+                        <img src="./img/jeferson.png" alt="Jefferson - Marceneiro e Projetista" class="w-40 h-40 object-cover rounded-full mb-6 border-4 border-white shadow-md">
+                        <h4 class="text-2xl font-serif font-bold text-wood-900 mb-1">Jefferson</h4>
+                        <p class="text-sm font-medium text-gold-600 tracking-wider uppercase mb-4">Marceneiro e Projetista</p>
+                        <p class="text-gray-700 font-light text-sm leading-relaxed">
+                            Especialista em projetos 3D e soluções de otimização de espaço, garantindo funcionalidade antes do corte. marceneiro técnico, pai dedicado e entusiasta de ferramentas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- ========================================== -->
-    <!-- SESSÃO: O MÉTODO DE TRABALHO -->
-    <!-- ========================================== -->
     <section id="metodo" class="py-20 bg-wood-100">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -191,9 +183,7 @@
                 </p>
             </div>
 
-            <!-- Grade de Comparação 3D vs Realidade -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-                <!-- Projeto 3D -->
                 <div class="bg-white rounded-md overflow-hidden shadow-lg group">
                     <div class="relative h-64 overflow-hidden">
                         <div class="absolute top-4 left-4 bg-wood-900 text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-sm z-10">Etapa 1</div>
@@ -208,7 +198,6 @@
                     </div>
                 </div>
 
-                <!-- Resultado Final -->
                 <div class="bg-white rounded-md overflow-hidden shadow-lg group">
                     <div class="relative h-64 overflow-hidden">
                         <div class="absolute top-4 left-4 bg-gold-500 text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-sm z-10">Entrega</div>
@@ -225,9 +214,6 @@
         </div>
     </section>
 
-    <!-- ========================================== -->
-    <!-- SESSÃO: PORTFÓLIO (GALERIA INTERATIVA) -->
-    <!-- ========================================== -->
     <section id="portfolio" class="py-20 bg-wood-900 text-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
@@ -235,26 +221,26 @@
                     <h2 class="text-sm font-bold text-gold-500 tracking-widest uppercase mb-2">Meu Trabalho</h2>
                     <h3 class="text-3xl md:text-4xl font-serif font-bold mb-4">Galeria de Criações</h3>
                     <p class="text-gray-400 font-light">
-                        Explore alguns dos trabalhos recentes. Clique nas imagens para expandir e ver mais fotos de cada projeto.
+                        Explore alguns dos trabalhos recentes. Clique nas imagens para expandir e usar as setas de navegação para ver todas as fotos de cada projeto.
                     </p>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <!-- Item 1: Usando "data-id" para vincular ao JavaScript -->
                 <div data-id="1" class="portfolio-card group relative h-80 overflow-hidden rounded-sm cursor-pointer">
+                    <!-- Substituído imagem local da cozinha aqui para usar a do seu banco de imagens: ./img/1.jpeg -->
                     <img src="./img/1.jpeg" alt="Cozinha Planejada" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                         <span class="text-gold-500 text-sm font-bold uppercase tracking-wider mb-1">Cozinhas</span>
                         <h4 class="text-xl font-serif font-bold flex items-center justify-between">
-                            Cozinha em Carvalho
+                            Cozinha Planejada
                             <i data-lucide="zoom-in" class="w-5 h-5 text-white/50"></i>
                         </h4>
                     </div>
                 </div>
                 
-                <!-- Item 2 -->
                 <div data-id="2" class="portfolio-card group relative h-80 overflow-hidden rounded-sm cursor-pointer">
+                    <!-- Substituído imagem local do dormitório aqui para usar a do seu banco de imagens: ./img/71.jpeg -->
                     <img src="./img/71.jpeg" alt="Armário Embutido" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                         <span class="text-gold-500 text-sm font-bold uppercase tracking-wider mb-1">Dormitórios</span>
@@ -265,8 +251,8 @@
                     </div>
                 </div>
                 
-                <!-- Item 3 -->
                 <div data-id="3" class="portfolio-card group relative h-80 overflow-hidden rounded-sm cursor-pointer">
+                    <!-- Substituído imagem local da sala aqui para usar a do seu banco de imagens: ./img/25.jpeg -->
                     <img src="./img/25.jpeg" alt="Painel Ripado e Sala" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                         <span class="text-gold-500 text-sm font-bold uppercase tracking-wider mb-1">Salas</span>
@@ -280,46 +266,44 @@
         </div>
     </section>
 
-    <!-- ========================================== -->
-    <!-- SESSÃO: CONTATOS E HISTÓRIA -->
-    <!-- ========================================== -->
     <section id="contato" class="py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-wood-100 rounded-md shadow-xl overflow-hidden">
                 <div class="grid grid-cols-1 lg:grid-cols-2">
                     
-                    <!-- Lado Esquerdo: Formas de Contato -->
                     <div class="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
                         <h2 class="text-sm font-bold text-gold-500 tracking-widest uppercase mb-2">Orçamentos</h2>
                         <h3 class="text-3xl md:text-4xl font-serif font-bold text-wood-900 mb-6">Vamos criar o seu ambiente ideal?</h3>
                         <p class="text-gray-600 font-light mb-10">
-                            Atendo toda a região de Osasco. Entre em contato através das plataformas abaixo para conversarmos sobre suas ideias. Elaboramos o projeto 3D para sua avaliação.
+                            Atendemos toda a região de Osasco. Entre em contato através das plataformas abaixo para conversarmos sobre suas ideias. Elaboramos o projeto 3D para sua avaliação.
                         </p>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <!-- Link WhatsApp -->
-                            <a href="https://wa.me/5511977067829" target="_blank" class="flex flex-col items-center justify-center p-6 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-md transition-all transform hover:-translate-y-1 shadow-lg shadow-green-500/30">
+                            <a href="https://wa.me/5511977067829" target="_blank" class="flex flex-col items-center justify-center p-6 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-md transition-all transform hover:-translate-y-1 shadow-lg shadow-green-500/30 text-center">
                                 <i data-lucide="message-circle" class="w-10 h-10 mb-3"></i>
-                                <span class="font-bold text-lg">WhatsApp</span>
+                                <span class="font-bold text-lg">WhatsApp Jonathan</span>
                                 <span class="text-sm opacity-90 font-light mt-1">Resposta Rápida</span>
                             </a>
 
-                            <!-- Link Instagram -->
+                            <a href="https://wa.me/5511947151195" target="_blank" class="flex flex-col items-center justify-center p-6 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-md transition-all transform hover:-translate-y-1 shadow-lg shadow-green-500/30 text-center">
+                                <i data-lucide="message-circle" class="w-10 h-10 mb-3"></i>
+                                <span class="font-bold text-lg">WhatsApp Jefferson</span>
+                                <span class="text-sm opacity-90 font-light mt-1">Contato Jefferson</span>
+                            </a>
+
                             <a href="https://www.instagram.com/tududimadeira" target="_blank" class="flex flex-col items-center justify-center p-6 bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] hover:opacity-90 text-white rounded-md transition-all transform hover:-translate-y-1 shadow-lg shadow-pink-500/30">
                                 <i data-lucide="instagram" class="w-10 h-10 mb-3"></i>
                                 <span class="font-bold text-lg">Instagram</span>
-                                <span class="text-sm opacity-90 font-light mt-1">Siga meu trabalho</span>
+                                <span class="text-sm opacity-90 font-light mt-1">Siga nosso trabalho</span>
                             </a>
 
-                            <!-- Link GetNinjas -->
                             <a href="#" target="_blank" class="flex flex-col items-center justify-center p-6 bg-[#00A1FF] hover:bg-[#008fe6] text-white rounded-md transition-all transform hover:-translate-y-1 shadow-lg shadow-blue-500/30">
                                 <i data-lucide="tool" class="w-10 h-10 mb-3"></i>
                                 <span class="font-bold text-lg">GetNinjas</span>
                                 <span class="text-sm opacity-90 font-light mt-1">Minhas avaliações</span>
                             </a>
 
-                            <!-- Botão E-mail (Abre Modal de Formulário) -->
-                            <button id="openEmailModalBtn" type="button" class="flex flex-col items-center justify-center p-6 w-full h-full bg-gray-800 hover:bg-gray-900 text-white rounded-md transition-all transform hover:-translate-y-1 shadow-lg shadow-gray-800/30">
+                            <button id="openEmailModalBtn" type="button" class="sm:col-span-2 flex flex-col items-center justify-center p-6 w-full h-full bg-gray-800 hover:bg-gray-900 text-white rounded-md transition-all transform hover:-translate-y-1 shadow-lg shadow-gray-800/30">
                                 <i data-lucide="mail" class="w-10 h-10 mb-3"></i>
                                 <span class="font-bold text-lg">E-mail</span>
                                 <span class="text-sm opacity-90 font-light mt-1">Formulário de Orçamento</span>
@@ -327,7 +311,6 @@
                         </div>
                     </div>
                     
-                    <!-- Lado Direito: Texto da Trajetória Histórica -->
                     <div class="relative w-full h-full bg-wood-900 text-white p-8 md:p-12 lg:p-16 flex flex-col justify-center">
                         <i data-lucide="quote" class="w-12 h-12 text-gold-500 mb-6 opacity-50"></i>
                         <h3 class="text-2xl md:text-3xl font-serif font-bold mb-6 leading-tight">
@@ -335,18 +318,18 @@
                         </h3>
                         <div class="space-y-4 text-gray-300 font-light text-sm md:text-base leading-relaxed">
                             <p>
-                                Minha paixão pela marcenaria despertou em 2012, nas oficinas da região de Osasco. O que começou como um fascínio pelas texturas da madeira e pelos encaixes perfeitos, rapidamente se tornou a vocação de uma vida.
+                                Nossa paixão pela marcenaria despertou em 2012, nas oficinas da região de Osasco. O que começou como um fascínio pelas texturas da madeira e pelos encaixes perfeitos, rapidamente se tornou a vocação de uma vida.
                             </p>
                             <p>
-                                Trabalhando lado a lado com mestres do ofício, ele aprendeu que um bom móvel exige mais do que apenas técnica — exige alma. Ao longo dos anos, uniu a sabedoria artesanal tradicional com as mais modernas ferramentas de design e modelagem 3D.
+                                Trabalhando lado a lado com mestres do ofício, aprendemos que um bom móvel exige mais do que apenas técnica — exige alma. Ao longo dos anos, unimos a sabedoria artesanal tradicional com as mais modernas ferramentas de design e modelagem 3D.
                             </p>
                             <p>
-                                Hoje, como profissional autônomo com assinatura própria, Jonathan dedica-se a entregar não apenas armários ou escrivaninhas, mas soluções inteligentes e elegantes que abraçam a rotina de cada cliente, garantindo durabilidade e um acabamento que impressiona em cada detalhe.
+                                Hoje, como profissionais dedicados com assinatura própria, a equipe Tudu Dimadeira dedica-se a entregar não apenas armários ou escrivaninhas, mas soluções inteligentes e elegantes que abraçam a rotina de cada cliente, garantindo durabilidade e um acabamento que impressiona em cada detalhe.
                             </p>
                         </div>
                         <div class="mt-8 pt-8 border-t border-gray-800">
                             <p class="text-gold-500 font-serif italic text-lg">"A excelência está nos detalhes que ninguém vê."</p>
-                            <p class="text-xs uppercase tracking-widest text-gray-500 mt-2">— Jonathan Duarte</p>
+                            <p class="text-xs uppercase tracking-widest text-gray-500 mt-2">— Tudu Dimadeira</p>
                         </div>
                     </div>
                 </div>
@@ -354,16 +337,10 @@
         </div>
     </section>
 
-    <!-- ========================================== -->
-    <!-- COMPONENTE: MODAL DE ORÇAMENTO (E-MAIL) -->
-    <!-- ========================================== -->
     <div id="emailModal" class="fixed inset-0 z-[9990] hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0 pointer-events-none">
-        <!-- Fundo Escurecido que fecha o modal ao clicar -->
         <div id="emailOverlay" class="absolute inset-0 bg-gray-900/80 backdrop-blur-sm cursor-pointer"></div>
         
-        <!-- Caixa Branca Principal -->
         <div class="bg-white rounded-md shadow-2xl w-full max-w-lg relative z-10 overflow-hidden transform scale-95 transition-transform duration-300" id="emailModalContent">
-            <!-- Cabeçalho -->
             <div class="p-6 bg-wood-900 text-white flex justify-between items-center">
                 <h3 class="text-xl font-serif font-bold">Solicitar Orçamento</h3>
                 <button id="closeEmailModalBtn" class="text-gray-400 hover:text-white transition-colors focus:outline-none">
@@ -371,7 +348,6 @@
                 </button>
             </div>
             
-            <!-- Formulário -->
             <form id="orcamentoForm" class="p-6 space-y-5">
                 <div>
                     <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
@@ -394,7 +370,6 @@
                     <textarea id="descricao" rows="4" required placeholder="Ex: Gostaria de um orçamento para uma escrivaninha..." class="w-full border border-gray-300 rounded-sm px-4 py-2.5 focus:ring-2 focus:ring-gold-500 focus:border-gold-500 outline-none transition-all text-gray-800 resize-none"></textarea>
                 </div>
                 
-                <!-- Botão Enviar -->
                 <div class="pt-2">
                     <button type="submit" class="w-full bg-gold-500 hover:bg-gold-600 text-white font-bold py-3.5 rounded-sm transition-colors shadow-lg shadow-gold-500/20 uppercase tracking-widest text-sm flex items-center justify-center gap-2">
                         <i data-lucide="send" class="w-4 h-4"></i>
@@ -405,82 +380,54 @@
         </div>
     </div>
 
-    <!-- ========================================== -->
-    <!-- COMPONENTE: MODAL DE GALERIA (PORTFÓLIO) -->
-    <!-- ========================================== -->
-    <!-- Alterado z-index para garantir sobreposição em tudo -->
     <div id="portfolioModal" class="fixed inset-0 z-[9999] hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0 pointer-events-none">
-        <!-- Fundo Escurecido Preto -->
         <div id="portfolioOverlay" class="absolute inset-0 bg-black/95 backdrop-blur-sm cursor-pointer"></div>
         
-        <!-- Container Principal da Imagem e Thumbnails -->
-        <div class="relative z-10 w-full max-w-[600px] flex flex-col items-center transform scale-95 transition-transform duration-300" id="portfolioModalContent">
+        <div class="relative z-10 w-full max-w-[600px] flex flex-col items-center transform scale-95 transition-transform duration-300 group" id="portfolioModalContent">
             
-            <!-- Botão Fechar Galeria -->
             <button id="closePortfolioBtn" class="absolute -top-12 right-0 text-white hover:text-gold-500 transition-colors focus:outline-none">
                 <i data-lucide="x" class="w-8 h-8"></i>
             </button>
             
-            <!-- Imagem Principal em Destaque -->
-            <div class="w-full h-[500px] md:h-[600px] max-h-[80vh] flex items-center justify-center rounded-sm overflow-hidden relative bg-black/50">
+            <div class="w-full h-[500px] md:h-[600px] max-h-[80vh] flex items-center justify-center rounded-sm overflow-hidden relative bg-black/50 select-none">
                 <img id="portfolioMainImg" src="" alt="Galeria do Portfólio" class="w-full h-full object-contain transition-opacity duration-300">
+
+                <button id="prevPortfolioBtn" class="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-black/40 text-white hover:bg-gold-500 hover:text-wood-900 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-gold-500
+                    opacity-60 md:opacity-0 md:group-hover:opacity-100">
+                    <i data-lucide="chevron-left" class="w-8 h-8"></i>
+                </button>
+                <button id="nextPortfolioBtn" class="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-black/40 text-white hover:bg-gold-500 hover:text-wood-900 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-gold-500
+                    opacity-60 md:opacity-0 md:group-hover:opacity-100">
+                    <i data-lucide="chevron-right" class="w-8 h-8"></i>
+                </button>
             </div>
             
-            <!-- Contêiner para injetar as Miniaturas -->
             <div class="flex gap-4 mt-4 w-full justify-center" id="portfolioThumbs">
-                <!-- As miniaturas (img) serão geradas pelo JavaScript aqui dentro -->
-            </div>
+                </div>
         </div>
     </div>
 
-    <!-- ========================================== -->
-    <!-- RODAPÉ DA PÁGINA (FOOTER) -->
-    <!-- ========================================== -->
     <footer class="bg-wood-900 border-t border-gray-800 text-gray-400 py-8 text-center text-sm font-light">
         <div class="container mx-auto px-4">
-            <p>&copy; 2026 Jonathan Duarte Vieira Lima. Todos os direitos reservados.</p>
-            <p class="mt-1">CNPJ: 60.390.640/0001-87 | Osasco, SP</p>
+            <p>&copy; 2026 Tudu Dimadeira Marcenaria. Todos os direitos reservados.</p>
+            <p class="mt-1">Osasco, SP | Jonathan e Jefferson</p>
         </div>
     </footer>
 
-    <!-- ========================================== -->
-    <!-- JAVASCRIPT (LÓGICA E INTERATIVIDADE) -->
-    <!-- ========================================== -->
     <script>
-        // Utilizamos o DOMContentLoaded para garantir que os elementos visuais já existam antes de ligar os eventos
         document.addEventListener('DOMContentLoaded', () => {
             
-            // ----------------------------------------
             // 1. CARREGAMENTO DOS ÍCONES (LUCIDE)
-            // ----------------------------------------
-            try {
-                lucide.createIcons();
-            } catch (error) {
-                console.error("Aviso: Falha ao carregar ícones.", error);
-            }
+            lucide.createIcons();
 
-            // ----------------------------------------
-            // 2. MENU MOBILE (CELULARES)
-            // ----------------------------------------
+            // 2. MENU MOBILE
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const mobileMenu = document.getElementById('mobileMenu');
             const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
 
-            // Abrir/Fechar menu principal
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Fecha o menu ao clicar em qualquer opção
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-
-            // ----------------------------------------
             // 3. LÓGICA DO MODAL DE E-MAIL (ORÇAMENTO)
-            // ----------------------------------------
             const emailModal = document.getElementById('emailModal');
             const emailModalContent = document.getElementById('emailModalContent');
             const openEmailModalBtn = document.getElementById('openEmailModalBtn');
@@ -488,7 +435,6 @@
             const emailOverlay = document.getElementById('emailOverlay');
             const orcamentoForm = document.getElementById('orcamentoForm');
 
-            // Função que abre a janela de email com animação
             function openEmailModal() {
                 emailModal.classList.remove('hidden');
                 setTimeout(() => {
@@ -497,59 +443,27 @@
                     emailModalContent.classList.add('scale-100');
                 }, 10);
             }
-
-            // Função que fecha a janela e inverte animação
             function closeEmailModal() {
                 emailModal.classList.add('opacity-0', 'pointer-events-none');
                 emailModalContent.classList.remove('scale-100');
                 emailModalContent.classList.add('scale-95');
-                setTimeout(() => {
-                    emailModal.classList.add('hidden');
-                }, 300);
+                setTimeout(() => emailModal.classList.add('hidden'), 300);
             }
-
-            // Atrela os eventos de clique aos botões
             openEmailModalBtn.addEventListener('click', openEmailModal);
             closeEmailModalBtn.addEventListener('click', closeEmailModal);
             emailOverlay.addEventListener('click', closeEmailModal);
-
-            // Disparo do E-mail quando o form for enviado
             orcamentoForm.addEventListener('submit', (e) => {
-                e.preventDefault(); // Impede recarregar a página
-                
-                // Coleta de dados
-                const nome = document.getElementById('nome').value;
-                const email = document.getElementById('email_input').value;
-                const whatsapp = document.getElementById('whatsapp').value;
-                const descricao = document.getElementById('descricao').value;
-
-                // Formatação do texto
-                const subject = encodeURIComponent(`Solicitação de Orçamento - ${nome}`);
-                const body = encodeURIComponent(
-`Olá Jonathan, gostaria de solicitar um orçamento. Seguem meus dados:
-
-Nome: ${nome}
-E-mail: ${email}
-WhatsApp: ${whatsapp}
-
-Descrição do Projeto:
-${descricao}
-`
-                );
-
-                // Abre o programa de email do usuário
+                e.preventDefault();
+                const subject = encodeURIComponent(`Orçamento - ${document.getElementById('nome').value}`);
+                const body = encodeURIComponent(`Nome: ${document.getElementById('nome').value}\nE-mail: ${document.getElementById('email_input').value}\nWA: ${document.getElementById('whatsapp').value}\nDescrição:\n${document.getElementById('descricao').value}`);
                 window.location.href = `mailto:tudodimadeira@gmail.com?subject=${subject}&body=${body}`;
-                
-                // Limpa formulário e fecha modal
                 orcamentoForm.reset();
                 closeEmailModal();
             });
 
             // ----------------------------------------
-            // 4. LÓGICA DO MODAL DE GALERIA (PORTFÓLIO)
+            // 4. LÓGICA DO MODAL DE GALERIA (PORTFÓLIO ATUALIZADA - NAVEGAÇÃO E IMAGENS LOCAIS)
             // ----------------------------------------
-            
-            // Banco de imagens da Galeria (Organizado por ID)
             const portfolioData = {
                 1: [
                     "./img/1.jpeg", 
@@ -596,54 +510,85 @@ ${descricao}
             const portfolioThumbs = document.getElementById('portfolioThumbs');
             const closePortfolioBtn = document.getElementById('closePortfolioBtn');
             const portfolioOverlay = document.getElementById('portfolioOverlay');
+            
+            // Novos elementos de navegação
+            const prevPortfolioBtn = document.getElementById('prevPortfolioBtn');
+            const nextPortfolioBtn = document.getElementById('nextPortfolioBtn');
 
-            // Função para montar a galeria do item clicado e abri-la
+            // Variáveis de Estado da Galeria Aberta
+            let currentProjectImages = [];
+            let currentImageIndex = 0;
+
+            // Função para trocar a imagem principal com efeito fade
+            function updateModalImage(index) {
+                if (index < 0 || index >= currentProjectImages.length) return;
+                
+                currentImageIndex = index;
+                const newSrc = currentProjectImages[currentImageIndex];
+                
+                // Fade Out
+                portfolioMainImg.style.opacity = '0.3';
+                
+                // Aguarda transição, troca imagem e aplica Fade In
+                setTimeout(() => {
+                    portfolioMainImg.src = newSrc;
+                    portfolioMainImg.style.opacity = '1';
+                }, 200);
+                
+                // Atualiza o estado visual das thumbnails
+                Array.from(portfolioThumbs.children).forEach((child, i) => {
+                    if (i === currentImageIndex) {
+                        child.classList.remove('border-transparent', 'opacity-60', 'hover:opacity-100', 'hover:border-gray-400');
+                        child.classList.add('border-gold-500', 'opacity-100', 'scale-105', 'shadow-lg');
+                    } else {
+                        child.classList.remove('border-gold-500', 'opacity-100', 'scale-105', 'shadow-lg');
+                        child.classList.add('border-transparent', 'opacity-60', 'hover:opacity-100', 'hover:border-gray-400');
+                    }
+                });
+            }
+
+            // Função para ir para a próxima imagem (com loop)
+            function showNextImage() {
+                let nextIndex = (currentImageIndex + 1) % currentProjectImages.length;
+                updateModalImage(nextIndex);
+            }
+
+            // Função para ir para a imagem anterior (com loop)
+            function showPrevImage() {
+                let prevIndex = (currentImageIndex - 1 + currentProjectImages.length) % currentProjectImages.length;
+                updateModalImage(prevIndex);
+            }
+
             function openPortfolioModal(id) {
-                const images = portfolioData[id];
-                if (!images) return; // Segurança, caso o id não exista
+                currentProjectImages = portfolioData[id];
+                if (!currentProjectImages || currentProjectImages.length === 0) return;
                 
-                // Configura a imagem grande
-                portfolioMainImg.src = images[0];
+                // Inicia na primeira imagem do projeto
+                updateModalImage(0);
                 
-                // Limpa as miniaturas antigas
+                // Limpa e recria as thumbnails
                 portfolioThumbs.innerHTML = '';
-                
-                // Cria as novas miniaturas (Botões inferiores)
-                images.forEach((src, index) => {
+                currentProjectImages.forEach((src, index) => {
                     const thumbElement = document.createElement('img');
                     thumbElement.src = src;
+                    thumbElement.alt = `Miniatura do projeto ${id}`;
                     
-                    // Aplica design base para as miniaturas
-                    // A primeira miniatura já começa com a borda dourada acesa indicando seleção
-                    thumbElement.className = `w-20 h-20 md:w-24 md:h-24 object-cover rounded-sm cursor-pointer border-2 transition-all duration-300 ${index === 0 ? 'border-gold-500 opacity-100 scale-105 shadow-lg' : 'border-transparent opacity-60 hover:opacity-100 hover:border-gray-400'}`;
+                    // Design base das thumbnails (idêntico ao anterior)
+                    thumbElement.className = `w-20 h-20 md:w-24 md:h-24 object-cover rounded-sm cursor-pointer border-2 transition-all duration-300`;
                     
-                    // Ação de trocar de foto ao clicar na miniatura
-                    thumbElement.addEventListener('click', () => {
-                        
-                        // Escurece a foto grande atual (Efeito Fade-out)
-                        portfolioMainImg.style.opacity = '0.3';
-                        
-                        // Troca a fonte da imagem após um piscar rápido e volta brilho
-                        setTimeout(() => {
-                            portfolioMainImg.src = src;
-                            portfolioMainImg.style.opacity = '1';
-                        }, 200);
-                        
-                        // Reposiciona a borda dourada na miniatura clicada
-                        Array.from(portfolioThumbs.children).forEach((child, i) => {
-                            if (i === index) {
-                                child.className = 'w-20 h-20 md:w-24 md:h-24 object-cover rounded-sm cursor-pointer border-2 border-gold-500 opacity-100 scale-105 shadow-lg transition-all duration-300';
-                            } else {
-                                child.className = 'w-20 h-20 md:w-24 md:h-24 object-cover rounded-sm cursor-pointer border-2 border-transparent opacity-60 hover:opacity-100 hover:border-gray-400 transition-all duration-300';
-                            }
-                        });
-                    });
+                    // Aplica design selecionado para a primeira imagem
+                    if (index === 0) {
+                        thumbElement.classList.add('border-gold-500', 'opacity-100', 'scale-105', 'shadow-lg');
+                    } else {
+                        thumbElement.classList.add('border-transparent', 'opacity-60', 'hover:opacity-100', 'hover:border-gray-400');
+                    }
                     
-                    // Insere o elemento recém-criado na tela
+                    // Clicar na miniatura altera a imagem principal usando a nova função
+                    thumbElement.addEventListener('click', () => updateModalImage(index));
                     portfolioThumbs.appendChild(thumbElement);
                 });
 
-                // Remove os travamentos visuais e inicia a animação de entrada
+                // Abre o modal animado
                 portfolioModal.classList.remove('hidden');
                 setTimeout(() => {
                     portfolioModal.classList.remove('opacity-0', 'pointer-events-none');
@@ -652,33 +597,54 @@ ${descricao}
                 }, 10);
             }
 
-            // Função para fechar a galeria
             function closePortfolioModal() {
                 portfolioModal.classList.add('opacity-0', 'pointer-events-none');
                 portfolioModalContent.classList.remove('scale-100');
                 portfolioModalContent.classList.add('scale-95');
-                
-                // Aguarda transição do tailwind antes de sumir por completo
-                setTimeout(() => {
-                    portfolioModal.classList.add('hidden');
-                }, 300);
+                setTimeout(() => portfolioModal.classList.add('hidden'), 300);
             }
 
-            // LIGAÇÃO DOS CLIQUES: Procura todos os "cards" do portfolio na página
+            // Atrela os cliques aos cards do portfólio
             const portfolioCards = document.querySelectorAll('.portfolio-card');
-            
             portfolioCards.forEach(card => {
-                // Quando clicar na foto...
-                card.addEventListener('click', () => {
-                    // Pega o número que está salvo no HTML (ex: data-id="1")
-                    const cardId = card.getAttribute('data-id');
-                    openPortfolioModal(cardId);
-                });
+                card.addEventListener('click', () => openPortfolioModal(card.getAttribute('data-id')));
             });
 
-            // Atrela o fechamento aos botões
+            // Atrela os cliques aos botões de navegação e fechamento
             closePortfolioBtn.addEventListener('click', closePortfolioModal);
             portfolioOverlay.addEventListener('click', closePortfolioModal);
+            prevPortfolioBtn.addEventListener('click', (e) => { e.stopPropagation(); showPrevImage(); });
+            nextPortfolioBtn.addEventListener('click', (e) => { e.stopPropagation(); showNextImage(); });
+            
+            // Suporte para Navegação por Teclas (Opcional, mas melhora UX)
+            document.addEventListener('keydown', (e) => {
+                if (portfolioModal.classList.contains('hidden')) return;
+                if (e.key === 'ArrowRight') showNextImage();
+                else if (e.key === 'ArrowLeft') showPrevImage();
+                else if (e.key === 'Escape') closePortfolioModal();
+            });
+
+            // Suporte para Navegação por Gesto (Swipe) em dispositivos móveis
+            let touchstartX = 0;
+            let touchendX = 0;
+
+            function handleGesture() {
+                // Define uma distância mínima para considerar o swipe
+                const minSwipeDistance = 50;
+                if (touchendX < touchstartX - minSwipeDistance) showNextImage();
+                else if (touchendX > touchstartX + minSwipeDistance) showPrevImage();
+            }
+
+            // Atrela eventos de toque à div da imagem principal
+            const mainImgContainer = portfolioMainImg.closest('div');
+            mainImgContainer.addEventListener('touchstart', (e) => {
+                touchstartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            mainImgContainer.addEventListener('touchend', (e) => {
+                touchendX = e.changedTouches[0].screenX;
+                handleGesture();
+            }, { passive: true });
             
         });
     </script>
